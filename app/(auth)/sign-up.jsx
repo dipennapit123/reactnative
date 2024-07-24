@@ -25,6 +25,8 @@ const SignUp = () => {
 
     try {
       const result = await createUser(form.email, form.password, form.username);
+    
+      
       // set it to global state....
 
       router.replace('/home')
@@ -34,8 +36,6 @@ const SignUp = () => {
     } finally {
       setIsSubmitting(false);
     }
-
-    createUser();
   };
 
   return (
